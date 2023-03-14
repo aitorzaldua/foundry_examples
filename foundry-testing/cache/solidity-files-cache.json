@@ -795,6 +795,46 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1678819045022,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
     "script/Counter.s.sol": {
       "lastModificationDate": 1678818113252,
       "contentHash": "0705c52104730a78aef4aa6694175c81",
@@ -848,10 +888,10 @@
         }
       }
     },
-    "src/Counter.sol": {
-      "lastModificationDate": 1678818113252,
-      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
-      "sourceName": "src/Counter.sol",
+    "src/StakeContract.sol": {
+      "lastModificationDate": 1678821237107,
+      "contentHash": "4b7be2cd23d3dcb7d91fa0c80db5288d",
+      "sourceName": "src/StakeContract.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -880,18 +920,20 @@
           "libraries": {}
         }
       },
-      "imports": [],
-      "versionRequirement": "^0.8.13",
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.4",
       "artifacts": {
-        "Counter": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Counter.sol/Counter.json"
+        "StakeContract": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "StakeContract.sol/StakeContract.json"
         }
       }
     },
-    "test/Counter.t.sol": {
-      "lastModificationDate": 1678818113252,
-      "contentHash": "b1a6521ba9c61d5266bab1fc9a057d68",
-      "sourceName": "test/Counter.t.sol",
+    "test/StakeContract.t.sol": {
+      "lastModificationDate": 1678821421942,
+      "contentHash": "95376fdc879d9c7febe98dba06196354",
+      "sourceName": "test/StakeContract.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -938,12 +980,13 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "src/Counter.sol"
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "src/StakeContract.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
         "CounterTest": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Counter.t.sol/CounterTest.json"
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "StakeContract.t.sol/CounterTest.json"
         }
       }
     }
